@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 * {
   font-family: "Roboto";
-  outline: 2px solid red;
+  /*outline: 2px solid red;*/
   margin: 0;
 }
 .main {

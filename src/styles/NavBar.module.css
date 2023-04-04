@@ -1,0 +1,12 @@
+.navBar {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+.material-icons {
+  color: red;
+}
+.button {
+  background-color: black;
+}

@@ -8,8 +8,8 @@ import styles from "./App.module.css";
 function App() {
   return (
     <div className={styles.main}>
-      <NavBar />
       <BrowserRouter>
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />

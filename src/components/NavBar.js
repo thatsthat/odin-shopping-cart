@@ -17,7 +17,9 @@ const NavBar = () => {
 
   return (
     <div className={styles.navBar}>
-      <div className={styles.button}>Home</div>
+      <div className={styles.button}>
+        <Link to="/">Home</Link>
+      </div>
       <div className={styles.button}>
         <Link to="/products">Products</Link>
       </div>

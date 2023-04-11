@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Product.module.css";
-import apple from "../images/shopping-cart.svg";
 
 const Product = (props) => {
   const [state, setState] = useState({});
@@ -9,9 +8,20 @@ const Product = (props) => {
     (() => {})();
   }, []);
 
+  function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => {
+      images[item.replace("./", "")] = r(item);
+      return "";
+    });
+    return images;
+  }
+
+  const images = importAll(require.context("../images", false, /\.svg$/));
+
   return (
     <div className={styles.product}>
-      <img alt="product" src={apple} />
+      <img alt="product" src={images[`${props.name}.svg`]} />
     </div>
   );
 };

@@ -26,7 +26,12 @@ const Product = (props) => {
         alt="product"
         src={images[`${props.name}.svg`]}
       />
-      <div className={styles.description}>{props.name}</div>
+      <div className={styles.description}>
+        <div>
+          <b>{props.name}</b>
+        </div>
+        <div>2.5€ / Kg</div>
+      </div>
     </div>
   );
 };

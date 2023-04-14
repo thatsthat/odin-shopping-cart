@@ -12,7 +12,7 @@ const NavBar = () => {
   const mystyle = {
     color: "white",
     backgroundColor: "black",
-    fontSize: "2rem",
+    fontSize: "3rem",
   };
 
   return (

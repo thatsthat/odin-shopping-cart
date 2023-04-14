@@ -4,13 +4,12 @@
   justify-content: space-around;
   padding: 1rem;
 }
-.material-icons {
-  color: red;
-}
-.button {
+.button,
+.button > * {
   display: flex;
   align-items: center;
   background-color: black;
   color: white;
   cursor: pointer;
+  text-decoration: none;
 }

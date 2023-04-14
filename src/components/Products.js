@@ -5,13 +5,18 @@ import styles from "../styles/Products.module.css";
 const Products = () => {
   const [state, setState] = useState({});
 
+  const names = ["apple", "banana", "grapes", "melon", "pear", "plum"];
+
   useEffect(() => {
     (() => {})();
   }, []);
-
   return (
     <div>
-      <Product name="pear" />
+      <div className={styles.productgrid}>
+        {Array(...Array(6)).map((v, i) => (
+          <Product key={i} name={names[i]} click={""} />
+        ))}
+      </div>
     </div>
   );
 };

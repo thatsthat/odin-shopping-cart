@@ -1,4 +1,24 @@
 .product {
   display: flex;
+  flex-direction: column;
   background-color: white;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0rem;
+  gap: 1rem;
+  border-radius: 10px;
+  width: 12rem;
+  cursor: pointer;
+  outline: solid #e5e5e5 1px;
+}
+
+.description {
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: center;
+}
+
+.photo {
+  height: 100px;
+  align-self: center;
 }

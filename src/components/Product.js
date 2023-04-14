@@ -21,7 +21,12 @@ const Product = (props) => {
 
   return (
     <div className={styles.product}>
-      <img alt="product" src={images[`${props.name}.svg`]} />
+      <img
+        className={styles.photo}
+        alt="product"
+        src={images[`${props.name}.svg`]}
+      />
+      <div className={styles.description}>{props.name}</div>
     </div>
   );
 };

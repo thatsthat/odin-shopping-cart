@@ -31,6 +31,7 @@ const Product = (props) => {
           <b>{props.name}</b>
         </div>
         <div>2.5€ / Kg</div>
+        <div className={styles.shopButton}>Add to cart</div>
       </div>
     </div>
   );

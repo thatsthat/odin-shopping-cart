@@ -6,8 +6,6 @@ const Product = (props) => {
 
   const increaseAmount = () => {
     setAmount((a) => a + 1);
-    console.log(amount);
-    return;
   };
 
   useEffect(() => {

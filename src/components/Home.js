@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     <div className={styles.logo}>
-      <Logo />
+      <Logo title="shoppingCart" />
     </div>
   );
 };

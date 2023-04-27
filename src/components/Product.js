@@ -12,16 +12,14 @@ const Product = (props) => {
     (() => {})();
   }, []);
 
-  function importAll(r) {
-    let images = {};
-    r.keys().map((item, index) => {
-      images[item.replace("./", "")] = r(item);
-      return "";
-    });
-    return images;
-  }
-
-  const images = importAll(require.context("../images", false, /\.svg$/));
+  const images = {
+    "apple.svg": "./images/apple.svg",
+    "banana.svg": "./images/banana.svg",
+    "grapes.svg": "./images/grapes.svg",
+    "melon.svg": "./images/melon.svg",
+    "pear.svg": "./images/pear.svg",
+    "plum.svg": "./images/plum.svg",
+  };
 
   return (
     <div className={styles.product}>

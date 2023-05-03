@@ -13,10 +13,20 @@ describe("App", () => {
 
   it("shopping cart image not present after clicking on products button on navbar", async () => {
     const user = userEvent.setup();
-
     render(<App />);
     const button = screen.getByText(/Products/);
     await user.click(button);
     expect(screen.queryByTitle("shoppingCart")).not.toBeInTheDocument();
+  });
+
+  it("products page rendered correctly", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    const button = screen.getByText(/Products/);
+    await user.click(button);
+
+    const images = ["apple", "banana", "grapes", "melon", "pear", "plum"];
+
+    images.forEach((i) => expect(screen.getByAltText(i)).toBeInTheDocument());
   });
 });

@@ -25,7 +25,7 @@ const Product = (props) => {
     <div className={styles.product}>
       <img
         className={styles.photo}
-        alt="product"
+        alt={props.name}
         src={images[`${props.name}.svg`]}
       />
       <div className={styles.description}>

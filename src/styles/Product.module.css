@@ -48,3 +48,7 @@
 .shopButton:hover {
   background-color: rgb(61, 61, 61);
 }
+
+.shopButton:active {
+  background-color: rgb(145, 145, 145);
+}

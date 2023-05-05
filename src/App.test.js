@@ -19,7 +19,7 @@ describe("App", () => {
     expect(screen.queryByTitle("shoppingCart")).not.toBeInTheDocument();
   });
 
-  it("products page rendered correctly", async () => {
+  it("all product images are present", async () => {
     const user = userEvent.setup();
     render(<App />);
     const button = screen.getByText(/Products/);
@@ -28,5 +28,15 @@ describe("App", () => {
     const images = ["apple", "banana", "grapes", "melon", "pear", "plum"];
 
     images.forEach((i) => expect(screen.getByAltText(i)).toBeInTheDocument());
+  });
+
+  it("number of images is correct", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    const button = screen.getByText(/Products/);
+    await user.click(button);
+
+    expect(screen.getAllByRole("img")).toHaveLength(6);
+    expect(screen.getAllByText(/Add to cart/)).toHaveLength(6);
   });
 });

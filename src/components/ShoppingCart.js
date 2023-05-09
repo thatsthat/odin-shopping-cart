@@ -11,14 +11,17 @@ const ShoppingCart = (props) => {
 
   return (
     <div className={styles.main}>
-      <div className={styles.header}>Your Shopping Cart</div>
-      <div>products</div>
-      <div className={styles.totalPrice}>Total: 0€</div>
-      <div className={styles.button} onClick={console.log("iep")}>
-        Checkout
-      </div>
-      <div className={styles.button} onClick={console.log("iep")}>
-        Close
+      <div className={styles.shade}></div>
+      <div className={styles.cart}>
+        <div className={styles.header}>Your Shopping Cart</div>
+        <div>products</div>
+        <div className={styles.totalPrice}>Total: 0€</div>
+        <div className={styles.button} onClick={console.log("iep")}>
+          Checkout
+        </div>
+        <div className={styles.button} onClick={console.log("iep")}>
+          Close
+        </div>
       </div>
     </div>
   );

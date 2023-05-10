@@ -8,6 +8,9 @@ import {
 } from "react-router-dom";
 import styles from "../styles/NavBar.module.css";
 import Products from "./Products";
+import ShoppingCart from "./ShoppingCart";
+import { Shop } from "@material-ui/icons";
+
 const NavBar = () => {
   const [state, setState] = useState({});
 

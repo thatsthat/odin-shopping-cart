@@ -6,22 +6,27 @@ import ShoppingCart from "./components/ShoppingCart";
 import styles from "./App.module.css";
 
 function App() {
-  /*   return (
+  return (
     <div className={styles.main}>
       <BrowserRouter>
-        <NavBar />
+        <div style={{ zIndex: "1000" }}>
+          <NavBar />
+        </div>
+        <div style={{ position: "absolute", zIndex: "1100" }}>
+          <ShoppingCart />
+        </div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
         </Routes>
       </BrowserRouter>
     </div>
-  ); */
-  return (
+  );
+  /*return (
     <div className={styles.main}>
       <ShoppingCart />
     </div>
-  );
+  );*/
 }
 
 export default App;

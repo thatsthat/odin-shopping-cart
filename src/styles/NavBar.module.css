@@ -3,10 +3,9 @@
   display: flex;
   justify-content: space-around;
   padding: 1rem;
-  font-size: 2.5rem;
-}
+  font-size: 2.5rem;}
 .button,
-.button > * {
+.button * {
   display: flex;
   align-items: center;
   background-color: black;

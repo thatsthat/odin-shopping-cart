@@ -12,7 +12,12 @@ function App() {
         <div style={{ zIndex: "1000" }}>
           <NavBar />
         </div>
-        <div style={{ position: "absolute", zIndex: "1100" }}>
+        <div
+          style={{
+            position: "fixed",
+            zIndex: "1100",
+          }}
+        >
           <ShoppingCart />
         </div>
         <Routes>

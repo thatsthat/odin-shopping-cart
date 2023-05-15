@@ -19,8 +19,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div className={styles.logo}>
-      <Logo title="shoppingCart" />
+    <div className={styles.main}>
+      <div className={styles.logo}>
+        <Logo title="shoppingCart" />
+      </div>
     </div>
   );
 };

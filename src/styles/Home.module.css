@@ -1,5 +1,12 @@
 * {
   margin: 0rem;
+  outline: red solid 1px;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 .logo {
   width: 30vw;

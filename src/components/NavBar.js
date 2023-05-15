@@ -25,17 +25,29 @@ const NavBar = () => {
   };
 
   return (
-    <div className={styles.navBar}>
-      <div className={styles.button}>
-        <Link to="/">Home</Link>
+    <div>
+      <div style={{ position: "fixed", zIndex: "1000" }}>
+        <div className={styles.navBar}>
+          <div className={styles.button}>
+            <Link to="/">Home</Link>
+          </div>
+          <div className={styles.button}>
+            <Link to="/products">Products</Link>
+          </div>
+          <div className={styles.button}>
+            <span className="material-icons-outlined" style={mystyle}>
+              shopping_cart
+            </span>
+          </div>
+        </div>
       </div>
-      <div className={styles.button}>
-        <Link to="/products">Products</Link>
-      </div>
-      <div className={styles.button}>
-        <span className="material-icons-outlined" style={mystyle}>
-          shopping_cart
-        </span>
+      <div
+        style={{
+          position: "fixed",
+          zIndex: "1100",
+        }}
+      >
+        <ShoppingCart />
       </div>
     </div>
   );

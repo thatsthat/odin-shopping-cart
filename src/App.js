@@ -9,17 +9,7 @@ function App() {
   return (
     <div className={styles.main}>
       <BrowserRouter>
-        <div style={{ zIndex: "1000" }}>
-          <NavBar />
-        </div>
-        <div
-          style={{
-            position: "fixed",
-            zIndex: "1100",
-          }}
-        >
-          <ShoppingCart />
-        </div>
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />

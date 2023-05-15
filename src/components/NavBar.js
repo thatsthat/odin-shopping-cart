@@ -12,7 +12,7 @@ import ShoppingCart from "./ShoppingCart";
 import { Shop } from "@material-ui/icons";
 
 const NavBar = () => {
-  const [state, setState] = useState({});
+  const [cartVisible, setCartVisible] = useState(false);
 
   useEffect(() => {
     (() => {})();
@@ -24,6 +24,9 @@ const NavBar = () => {
     fontSize: "3rem",
   };
 
+  const showCart = () => setCartVisible(true);
+  const hideCart = () => setCartVisible(false);
+
   return (
     <div>
       <div style={{ position: "fixed", zIndex: "1000" }}>
@@ -34,7 +37,7 @@ const NavBar = () => {
           <div className={styles.button}>
             <Link to="/products">Products</Link>
           </div>
-          <div className={styles.button}>
+          <div className={styles.button} onClick={showCart}>
             <span className="material-icons-outlined" style={mystyle}>
               shopping_cart
             </span>
@@ -47,7 +50,7 @@ const NavBar = () => {
           zIndex: "1100",
         }}
       >
-        <ShoppingCart />
+        {cartVisible ? <ShoppingCart closeCart={hideCart} /> : null}
       </div>
     </div>
   );

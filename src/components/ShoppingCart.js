@@ -19,7 +19,7 @@ const ShoppingCart = (props) => {
         <div className={styles.button} onClick={console.log("iep")}>
           Checkout
         </div>
-        <div className={styles.button} onClick={console.log("iep")}>
+        <div className={styles.button} onClick={props.closeCart}>
           Close
         </div>
       </div>

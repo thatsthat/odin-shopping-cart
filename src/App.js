@@ -27,11 +27,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-  /*return (
-    <div className={styles.main}>
-      <ShoppingCart />
-    </div>
-  );*/
 }
 
 export default App;

@@ -11,7 +11,7 @@ const ShoppingCart = (props) => {
 
   return (
     <div className={styles.main}>
-      <div className={styles.shade}></div>
+      <div className={styles.shade} onClick={props.closeCart}></div>
       <div className={styles.cart}>
         <div className={styles.header}>Your Shopping Cart</div>
         <div>products</div>

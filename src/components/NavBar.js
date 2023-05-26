@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-  useLocation,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "../styles/NavBar.module.css";
 import Products from "./Products";
 import ShoppingCart from "./ShoppingCart";

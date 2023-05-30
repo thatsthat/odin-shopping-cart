@@ -5,7 +5,7 @@ import Products from "./Products";
 import ShoppingCart from "./ShoppingCart";
 import { Shop } from "@material-ui/icons";
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [cartVisible, setCartVisible] = useState(false);
 
   useEffect(() => {

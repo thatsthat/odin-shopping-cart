@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Product from "./Product";
 import styles from "../styles/Products.module.css";
 
-const Products = () => {
+const Products = (props) => {
   const [state, setState] = useState({});
 
   const names = ["apple", "banana", "grapes", "melon", "pear", "plum"];
@@ -14,7 +14,7 @@ const Products = () => {
     <div>
       <div className={styles.productgrid}>
         {Array(...Array(6)).map((v, i) => (
-          <Product key={i} name={names[i]} click={""} />
+          <Product key={i} name={names[i]} clickButton={props.clickButton} />
         ))}
       </div>
     </div>

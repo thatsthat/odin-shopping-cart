@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/Product.module.css";
 
 const Product = (props) => {
-  const [amount, setAmount] = useState(0);
+  /* const [amount, setAmount] = useState(0);
 
   const increaseAmount = () => {
     setAmount((a) => a + 1);
-  };
+  }; */
 
   useEffect(() => {
     (() => {})();
@@ -33,7 +33,10 @@ const Product = (props) => {
           <b>{props.name}</b>
         </div>
         <div>2.5€ / Kg</div>
-        <div className={styles.shopButton} onClick={increaseAmount}>
+        <div
+          className={styles.shopButton}
+          onClick={props.clickButton(props.key)}
+        >
           Add to cart
         </div>
       </div>

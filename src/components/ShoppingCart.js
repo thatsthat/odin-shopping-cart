@@ -16,7 +16,7 @@ const ShoppingCart = (props) => {
         <div className={styles.header}>Your Shopping Cart</div>
         <div>products</div>
         <div className={styles.totalPrice}>Total: 0€</div>
-        <div className={styles.button} onClick={console.log("iep")}>
+        <div className={styles.button} onClick={console.log("checked out")}>
           Checkout
         </div>
         <div className={styles.button} onClick={props.closeCart}>

@@ -6,10 +6,10 @@ import Products from "./Products";
 import styles from "../styles/Eshop.module.css";
 
 const Eshop = () => {
-  let initialCounters = [0, 0, 0, 0];
+  let initialCounters = [0, 0, 0, 0, 0, 0];
   const [counters, setCounters] = useState(initialCounters);
 
-  function handleIncrementClick(index) {
+  function oneMore(index) {
     const nextCounters = counters.map((c, i) => {
       if (i === index) {
         // Increment the clicked counter
@@ -19,10 +19,11 @@ const Eshop = () => {
         return c;
       }
     });
+    console.log(nextCounters);
     setCounters(nextCounters);
   }
 
-  function handleDecrementClick(index) {
+  function oneLess(index) {
     const nextCounters = counters.map((c, i) => {
       if (i === index) {
         // Decrement the clicked counter
@@ -43,10 +44,13 @@ const Eshop = () => {
   return (
     <div className={styles.main}>
       <BrowserRouter>
-        <NavBar />
+        <NavBar incClick={oneMore} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
+          <Route
+            path="/products"
+            element={<Products clickButton={oneMore} />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import ProductInCart from "./ProductInPage";
 import styles from "../styles/ShoppingCart.module.css";
 
 const ShoppingCart = (props) => {
@@ -9,12 +10,23 @@ const ShoppingCart = (props) => {
     (() => {})();
   }, []);
 
+  const names = ["apple", "banana", "grapes", "melon", "pear", "plum"];
+
   return (
     <div className={styles.main}>
       <div className={styles.shade} onClick={props.closeCart}></div>
       <div className={styles.cart}>
         <div className={styles.header}>Your Shopping Cart</div>
-        <div>products</div>
+        <div className={styles.products}>
+          {Array(...Array(6)).map((v, i) => (
+            <ProductInCart
+              key={i}
+              id={i}
+              name={names[i]}
+              clickButton={props.clickButton}
+            />
+          ))}
+        </div>
         <div className={styles.totalPrice}>Total: 0€</div>
         <div className={styles.button} onClick={console.log("checked out")}>
           Checkout

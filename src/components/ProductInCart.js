@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import styles from "../styles/Product.module.css";
+import styles from "../styles/ProductInCart.module.css";
 
-const Product = (props) => {
+const ProductInCart = (props) => {
   /* const [amount, setAmount] = useState(0);
 
   const increaseAmount = () => {
@@ -44,4 +44,4 @@ const Product = (props) => {
   );
 };
 
-export default Product;
+export default ProductInCart;

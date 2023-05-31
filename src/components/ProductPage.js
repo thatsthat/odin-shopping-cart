@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Product from "./Product";
-import styles from "../styles/Products.module.css";
+import ProductInPage from "./ProductInPage";
+import styles from "../styles/ProductPage.module.css";
 
-const Products = (props) => {
+const ProductPage = (props) => {
   const [state, setState] = useState({});
 
   const names = ["apple", "banana", "grapes", "melon", "pear", "plum"];
@@ -14,7 +14,7 @@ const Products = (props) => {
     <div>
       <div className={styles.productgrid}>
         {Array(...Array(6)).map((v, i) => (
-          <Product
+          <ProductInPage
             key={i}
             id={i}
             name={names[i]}
@@ -26,4 +26,4 @@ const Products = (props) => {
   );
 };
 
-export default Products;
+export default ProductPage;

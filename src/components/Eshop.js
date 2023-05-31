@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import NavBar from "./NavBar";
 import Home from "./Home";
-import Products from "./Products";
+import ProductPage from "./ProductPage";
 import styles from "../styles/Eshop.module.css";
 
 const Eshop = () => {
@@ -49,7 +49,7 @@ const Eshop = () => {
           <Route path="/" element={<Home />} />
           <Route
             path="/products"
-            element={<Products clickButton={oneMore} />}
+            element={<ProductPage clickButton={oneMore} />}
           />
         </Routes>
       </BrowserRouter>

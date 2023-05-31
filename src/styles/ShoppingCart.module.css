@@ -2,8 +2,8 @@
   display: flex;
 }
 .main * {
+  /* outli`ne: 2px solid red; */
   background-color: white;
-  /* outline: 2px solid red; */
 }
 
 .shade {
@@ -32,7 +32,6 @@
   font-size: 1.5rem;
   margin: 1rem 0rem;
 }
-
 .button {
   display: flex;
   width: 8rem;
@@ -61,4 +60,12 @@
 .products {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  max-height: 60vh;
+  width: 20vw;
+}
+
+.products > div {
+  width: 14vw;
 }

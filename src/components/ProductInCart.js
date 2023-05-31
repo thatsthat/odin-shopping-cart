@@ -35,6 +35,7 @@ const ProductInCart = (props) => {
         <div>$$$</div>
         <div className={styles.quantityControls}>
           <div
+            id={styles["buttonDec"]}
             className={styles.quantityButton}
             onClick={() => props.clickButton(props.id)}
           >
@@ -42,6 +43,7 @@ const ProductInCart = (props) => {
           </div>
           <div className={styles.quantity}>0</div>
           <div
+            id={styles["buttonInc"]}
             className={styles.quantityButton}
             onClick={() => props.clickButton(props.id)}
           >

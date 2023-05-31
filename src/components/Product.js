@@ -35,7 +35,7 @@ const Product = (props) => {
         <div>2.5€ / Kg</div>
         <div
           className={styles.shopButton}
-          onClick={props.clickButton(props.key)}
+          onClick={() => props.clickButton(props.id)}
         >
           Add to cart
         </div>

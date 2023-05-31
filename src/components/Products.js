@@ -14,7 +14,12 @@ const Products = (props) => {
     <div>
       <div className={styles.productgrid}>
         {Array(...Array(6)).map((v, i) => (
-          <Product key={i} name={names[i]} clickButton={props.clickButton} />
+          <Product
+            key={i}
+            id={i}
+            name={names[i]}
+            clickButton={props.clickButton}
+          />
         ))}
       </div>
     </div>

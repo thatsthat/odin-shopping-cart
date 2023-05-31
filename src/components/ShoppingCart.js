@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import ProductInCart from "./ProductInPage";
+import ProductInCart from "./ProductInCart";
 import styles from "../styles/ShoppingCart.module.css";
 
 const ShoppingCart = (props) => {
@@ -18,7 +18,7 @@ const ShoppingCart = (props) => {
       <div className={styles.cart}>
         <div className={styles.header}>Your Shopping Cart</div>
         <div className={styles.products}>
-          {Array(...Array(6)).map((v, i) => (
+          {Array(...Array(2)).map((v, i) => (
             <ProductInCart
               key={i}
               id={i}

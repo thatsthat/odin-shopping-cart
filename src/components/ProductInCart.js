@@ -32,12 +32,21 @@ const ProductInCart = (props) => {
         <div>
           <b>{props.name}</b>
         </div>
-        <div>2.5€ / Kg</div>
-        <div
-          className={styles.shopButton}
-          onClick={() => props.clickButton(props.id)}
-        >
-          Add to cart
+        <div>$$$</div>
+        <div className={styles.quantityControls}>
+          <div
+            className={styles.quantityButton}
+            onClick={() => props.clickButton(props.id)}
+          >
+            -
+          </div>
+          <div className={styles.quantity}>0</div>
+          <div
+            className={styles.quantityButton}
+            onClick={() => props.clickButton(props.id)}
+          >
+            +
+          </div>
         </div>
       </div>
     </div>

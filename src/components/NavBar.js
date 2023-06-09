@@ -50,6 +50,8 @@ const NavBar = (props) => {
             moreClick={props.incClick}
             lessClick={props.decClick}
             quantities={props.quantities}
+            fruitNames={props.fruitNames}
+            fruitPrices={props.fruitPrices}
           />
         ) : null}
       </div>

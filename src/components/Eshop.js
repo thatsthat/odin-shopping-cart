@@ -8,6 +8,8 @@ import styles from "../styles/Eshop.module.css";
 const Eshop = () => {
   let initialCounters = [0, 0, 0, 0, 0, 0];
   const [counters, setCounters] = useState(initialCounters);
+  const names = ["apple", "banana", "grapes", "melon", "pear", "plum"];
+  const prices = [1, 2, 3, 4, 5, 6];
 
   function oneMore(index) {
     const nextCounters = counters.map((c, i) => {
@@ -45,12 +47,24 @@ const Eshop = () => {
   return (
     <div className={styles.main}>
       <BrowserRouter>
-        <NavBar incClick={oneMore} decClick={oneLess} quantities={counters} />
+        <NavBar
+          incClick={oneMore}
+          decClick={oneLess}
+          quantities={counters}
+          fruitNames={names}
+          fruitPrices={prices}
+        />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
             path="/products"
-            element={<ProductPage clickButton={oneMore} />}
+            element={
+              <ProductPage
+                clickButton={oneMore}
+                fruitNames={names}
+                fruitPrices={prices}
+              />
+            }
           />
         </Routes>
       </BrowserRouter>

@@ -10,8 +10,6 @@ const ShoppingCart = (props) => {
     (() => {})();
   }, []);
 
-  const names = ["apple", "banana", "grapes", "melon", "pear", "plum"];
-
   return (
     <div className={styles.main}>
       <div className={styles.shade} onClick={props.closeCart}></div>
@@ -22,10 +20,11 @@ const ShoppingCart = (props) => {
             <ProductInCart
               key={i}
               id={i}
-              name={names[i]}
+              name={props.fruitNames[i]}
               moreClick={props.moreClick}
               lessClick={props.lessClick}
               quantity={props.quantities[i]}
+              price={props.fruitPrices[i]}
             />
           ))}
         </div>

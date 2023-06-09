@@ -5,8 +5,6 @@ import styles from "../styles/ProductPage.module.css";
 const ProductPage = (props) => {
   const [state, setState] = useState({});
 
-  const names = ["apple", "banana", "grapes", "melon", "pear", "plum"];
-
   useEffect(() => {
     (() => {})();
   }, []);
@@ -17,8 +15,9 @@ const ProductPage = (props) => {
           <ProductInPage
             key={i}
             id={i}
-            name={names[i]}
+            name={props.fruitNames[i]}
             clickButton={props.clickButton}
+            price={props.fruitPrices[i]}
           />
         ))}
       </div>

@@ -44,7 +44,14 @@ const NavBar = (props) => {
           zIndex: "1100",
         }}
       >
-        {cartVisible ? <ShoppingCart closeCart={hideCart} /> : null}
+        {cartVisible ? (
+          <ShoppingCart
+            closeCart={hideCart}
+            moreClick={props.incClick}
+            lessClick={props.decClick}
+            quantities={props.quantities}
+          />
+        ) : null}
       </div>
     </div>
   );

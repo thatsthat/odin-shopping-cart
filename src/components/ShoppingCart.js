@@ -23,7 +23,9 @@ const ShoppingCart = (props) => {
               key={i}
               id={i}
               name={names[i]}
-              clickButton={props.clickButton}
+              moreClick={props.moreClick}
+              lessClick={props.lessClick}
+              quantity={props.quantities[i]}
             />
           ))}
         </div>

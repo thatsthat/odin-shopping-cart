@@ -37,15 +37,15 @@ const ProductInCart = (props) => {
           <div
             id={styles["buttonDec"]}
             className={styles.quantityButton}
-            onClick={() => props.clickButton(props.id)}
+            onClick={() => props.lessClick(props.id)}
           >
             -
           </div>
-          <div className={styles.quantity}>0</div>
+          <div className={styles.quantity}>{props.quantity}</div>
           <div
             id={styles["buttonInc"]}
             className={styles.quantityButton}
-            onClick={() => props.clickButton(props.id)}
+            onClick={() => props.moreClick(props.id)}
           >
             +
           </div>

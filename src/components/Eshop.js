@@ -34,6 +34,7 @@ const Eshop = () => {
         return c;
       }
     });
+    console.log(nextCounters);
     setCounters(nextCounters);
   }
 
@@ -44,7 +45,7 @@ const Eshop = () => {
   return (
     <div className={styles.main}>
       <BrowserRouter>
-        <NavBar incClick={oneMore} />
+        <NavBar incClick={oneMore} decClick={oneLess} quantities={counters} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route

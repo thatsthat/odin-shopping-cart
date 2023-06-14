@@ -28,7 +28,14 @@ const ShoppingCart = (props) => {
             />
           ))}
         </div>
-        <div className={styles.totalPrice}>Total: 0€</div>
+        <div className={styles.totalPrice}>
+          Total:
+          {props.quantities.reduce(
+            (a, b, i) => a + props.fruitPrices[i] * b,
+            0
+          )}
+          €
+        </div>
         <div className={styles.button} onClick={console.log("checked out")}>
           Checkout
         </div>

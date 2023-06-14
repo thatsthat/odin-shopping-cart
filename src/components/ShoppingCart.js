@@ -16,17 +16,19 @@ const ShoppingCart = (props) => {
       <div className={styles.cart}>
         <div className={styles.header}>Your Shopping Cart</div>
         <div className={styles.products}>
-          {Array(...Array(6)).map((v, i) => (
-            <ProductInCart
-              key={i}
-              id={i}
-              name={props.fruitNames[i]}
-              moreClick={props.moreClick}
-              lessClick={props.lessClick}
-              quantity={props.quantities[i]}
-              price={props.fruitPrices[i]}
-            />
-          ))}
+          {Array(...Array(6)).map((v, i) =>
+            props.quantities[i] ? (
+              <ProductInCart
+                key={i}
+                id={i}
+                name={props.fruitNames[i]}
+                moreClick={props.moreClick}
+                lessClick={props.lessClick}
+                quantity={props.quantities[i]}
+                price={props.fruitPrices[i]}
+              />
+            ) : null
+          )}
         </div>
         <div className={styles.totalPrice}>
           Total:

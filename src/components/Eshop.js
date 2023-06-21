@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import NavBar from "./NavBar";
 import Home from "./Home";
@@ -46,7 +46,7 @@ const Eshop = () => {
 
   return (
     <div className={styles.main}>
-      <BrowserRouter>
+      <HashRouter>
         <NavBar
           incClick={oneMore}
           decClick={oneLess}
@@ -67,7 +67,7 @@ const Eshop = () => {
             }
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };

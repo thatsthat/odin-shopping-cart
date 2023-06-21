@@ -17,7 +17,7 @@ const ProductInPage = (props) => {
       <img
         className={styles.photo}
         alt={props.name}
-        src={`./images/${props.name}.svg`}
+        src={`${process.env.PUBLIC_URL}/images/${props.name}.svg`}
       />
       <div className={styles.description}>
         <div>

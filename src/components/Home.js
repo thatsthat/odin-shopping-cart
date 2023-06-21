@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
-import { ReactComponent as Logo } from "../images/shopping-cart.svg";
 
 function App() {
   return (
@@ -20,8 +19,12 @@ const Home = () => {
 
   return (
     <div className={styles.main}>
-      <div className={styles.logo}>
-        <Logo title="shoppingCart" />
+      <div>
+        <img
+          className={styles.logo}
+          alt="logo"
+          src={`${process.env.PUBLIC_URL}/images/shopping-cart.svg`}
+        />
       </div>
     </div>
   );
